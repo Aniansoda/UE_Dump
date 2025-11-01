@@ -46,8 +46,8 @@ UE4内存读取器是一款专为Unreal Engine 4/5游戏设计的高性能内存
 ### 编译安装
 ```bash
 # 克隆项目
-git clone https://github.com/Anian-Magic-King/ue4-memory-reader.git
-cd ue4-memory-reader
+git https://github.com/KernelDan/UE_Dump.git
+cd UE_Dump
 
 # 编译程序
 clang++ -std=c++20 -O3 UE引擎Gworld_Gnane.cpp -o UE_Dump_Gdata
@@ -55,19 +55,19 @@ clang++ -std=c++20 -O3 UE引擎Gworld_Gnane.cpp -o UE_Dump_Gdata
 g++ -std=c++20 -O3 UE引擎Gworld_Gnane.cpp -o UE_Dump_Gdata
 
 # 授予执行权限
-chmod +x ue_reader
+chmod +x UE_Dump_Gdata
 ```
 
 基本使用
 
 ```bash
 # 交互模式（推荐）
-sudo ./ue_reader <目标进程PID>
+sudo ./UE_Dump_Gdata <目标进程PID>
 
 # 单命令模式
-sudo ./ue_reader <PID> base              # 显示基础信息
-sudo ./ue_reader <PID> game              # 显示游戏地址
-sudo ./ue_reader <PID> chain libue4+0x12345678->0x20->0x30  # 链式读取
+sudo ./UE_Dump_Gdata <PID> base              # 显示基础信息
+sudo ./UE_Dump_Gdata <PID> game              # 显示游戏地址
+sudo ./UE_Dump_Gdata <PID> chain libue4+0x12345678->0x20->0x30  # 链式读取
 ```
 
 📋 命令手册
@@ -143,8 +143,7 @@ PlayerController: 0x7ff812345690
 阿念Magic King - UE4逆向分析专家 & 工具开发者
 
 📧 邮箱: 3274457741@qq.com
-🌐 博客: https://bohaoweizhi.github.io
-🐙 GitHub: @Anian-Magic-King
+🐙 GitHub: @Toyotomi
 
 ---
 
